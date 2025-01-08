@@ -1,0 +1,9 @@
+<form (ngSubmit)="createPerson()">
+  <label for="name">Name:</label>
+  <input type="text" id="name" [(ngModel)]="person.name" name="name" required>
+
+  <label for="age">Age:</label>
+  <input type="number" id="age" [(ngModel)]="person.age" name="age" required>
+
+  <button type="submit">Create Person</button>
+</form>
