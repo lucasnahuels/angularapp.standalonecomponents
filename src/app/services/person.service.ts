@@ -6,6 +6,11 @@ import { Person } from "../models/person.model";
 is available as a singleton service throughout your application.
 By using the @Injectable decorator, Angular can inject these dependencies into the PersonService 
 when it is instantiated.*/
+/*
+When you use providedIn: 'root', Angular creates a single instance of the service that is shared 
+across the entire application. This means that any component or service that injects PersonService 
+will receive the same instance.
+*/ 
 @Injectable({
     providedIn: 'root'
 })
