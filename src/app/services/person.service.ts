@@ -24,7 +24,7 @@ export class PersonService {
     ];
 
     private personsSubject: BehaviorSubject<Person[]> = new BehaviorSubject(this.persons);
-    persons$: Observable<Person[]> = this.personsSubject.asObservable();
+    // persons$: Observable<Person[]> = this.personsSubject.asObservable();
   
     // getPersons() {
     //     return this.persons;
@@ -36,7 +36,7 @@ export class PersonService {
     addPerson(person: Person): Observable<Person> {
         person.id = this.persons.length + 1;
         this.persons.push(person);
-        this.personsSubject.next(this.persons); // Notify subscribers of the change
+        // this.personsSubject.next(this.persons); // Notify subscribers of the change
         return of(person);
     }
 }
